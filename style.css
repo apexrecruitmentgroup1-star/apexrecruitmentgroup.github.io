@@ -1,77 +1,72 @@
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  padding: 0;
-  color: #222;
-  line-height: 1.6;
+  font-family: Arial, sans-serif;
+  background: #f8f9fb;
+  color: #333;
 }
 
 header {
-  background: #0b2c4d;
-  color: #fff;
-  padding: 25px;
-  text-align: center;
+  background: #0b3c5d;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav {
-  background: #f1f1f1;
-  padding: 12px;
-  text-align: center;
-}
-
-nav a {
-  margin: 0 12px;
-  text-decoration: none;
-  color: #0b2c4d;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-section {
-  padding: 25px;
-  max-width: 900px;
-  margin: auto;
-}
-
-ul, ol {
+header a {
+  color: white;
   margin-left: 20px;
+  text-decoration: none;
 }
 
-form {
-  max-width: 500px;
+.hero {
+  background: linear-gradient(135deg, #0b3c5d, #1d6fa5);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+}
+
+.form-section {
+  padding: 40px 20px;
+  max-width: 600px;
   margin: auto;
 }
 
-input, textarea, button, select {
+form input, form textarea {
   width: 100%;
   padding: 12px;
-  margin-top: 10px;
-  font-size: 14px;
-  box-sizing: border-box;
+  margin: 10px 0;
 }
 
-input[type="file"] {
-  padding: 5px;
-}
-
-button {
-  background: #0b2c4d;
+form button {
+  background: #0b3c5d;
   color: white;
+  padding: 12px;
   border: none;
   cursor: pointer;
 }
 
-button:hover {
-  background: #083057;
+.note {
+  font-size: 14px;
+  color: #555;
+}
+
+.about-preview, .content {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
 }
 
 footer {
-  background: #eee;
+  background: #0b3c5d;
+  color: white;
   text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-  font-size: 14px;
+  padding: 20px;
+  margin-top: 40px;
 }
