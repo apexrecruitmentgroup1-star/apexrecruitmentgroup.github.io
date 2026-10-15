@@ -1,0 +1,6 @@
+import type {Metadata} from 'next';
+import {runtime} from '@/lib/db';
+import './globals.css';
+export const dynamic='force-dynamic';
+export async function generateMetadata():Promise<Metadata>{let origin='';try{origin=runtime().SITE_URL||''}catch{}const valid=/^https:\/\/[^/]+\/?$/.test(origin);return {title:{default:'Apex Global Services LLC | Recruitment & Workforce Solutions',template:'%s | Apex Global Services LLC'},description:'Recruitment, outsourcing, staff augmentation and workforce sourcing in Egypt and MENA. Find your next role or request a tailored proposal.',icons:{icon:'/apex-logo.png',shortcut:'/apex-logo.png'},...(valid?{metadataBase:new URL(origin)}:{}),openGraph:{title:'Apex Global Services LLC',description:'The right people. The right support. Room to grow.',...(valid?{images:[{url:`${origin.replace(/\/$/,'')}/og.png`,width:1730,height:909,alt:'Apex Global Services LLC — Recruitment, Outsourcing and Staff Augmentation'}]}:{})},twitter:{card:'summary_large_image',...(valid?{images:[`${origin.replace(/\/$/,'')}/og.png`]}:{})}}}
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body><a href="#main-content" className="skip-link">Skip to content / الانتقال للمحتوى</a>{children}</body></html>}
